@@ -1,0 +1,8 @@
+---
+ - name: yum
+   hosts: all
+   tasks:   
+      - name: httpd install
+        yum: name=httpd state=present
+	  - name: httpd
+        service: name=httpd state=started enabled=yes
