@@ -1,0 +1,14 @@
+---
+  - name: my first playbook
+    hosts: ans-client-8-B
+    tasks:
+       - name: new file creation
+         file: dest=/tmp/nani state=touch mode=666
+       - name: copy nani file
+         copy: src=/tmp/nani dest=/var/tmp/ remote_src=yes
+       - name: create directory
+         file: dest=/tmp/mom state=directory mode=777
+       - name: cteate user
+         user: name=bata group=bat22a
+       - name: content
+         lineinfile: dest=/var/www/html/index.html line='vara-sys-08-07'
