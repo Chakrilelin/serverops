@@ -1,1 +1,8 @@
-
+---
+ - name: yum vsftpd
+   hosts:
+   tasks:
+     - name: vsftpd
+	   yum: name=vsftpd stste=present
+	 - name: vsftpd service 
+	   service: name=vsftpd state=started
